@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledButton } from "../buttons/Buttons";
-import bgImg from "../../scene-img/1.jpg";
+import bgImg from "../../scene-img/welcome.jpg";
 
 const StyledWelcome = styled.div`
   width: 100%;
@@ -17,7 +17,8 @@ const StyledWelcome = styled.div`
   align-items: center;
   gap: 2rem;
   background-image: url(${bgImg});
-  background-size: 100%;
+  background-size: contain;
+  background-position: center;
 `;
 
 function Welcome(props) {
