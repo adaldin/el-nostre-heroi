@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledButton } from "../buttons/Buttons";
-import bgImg from "../../scene-img/welcome.jpg";
+import bgImg from "../scene-img/welcome.jpg";
+import "../App.css";
+import Button from "../components/Button";
 
 const StyledWelcome = styled.div`
   width: 100%;
@@ -17,6 +18,7 @@ const StyledWelcome = styled.div`
   align-items: center;
   gap: 2rem;
   background-image: url(${bgImg});
+  background-repeat: repeat;
   background-size: contain;
   background-position: center;
 `;
@@ -26,11 +28,12 @@ function Welcome(props) {
     <StyledWelcome>
       <h1>Benvinguts!</h1>
       <p>
-        Lest per abordar aquesta aventura? Sobte a bord de la nau i decideix el
-        destí del nostre heroi cliquejant un futur a la pantalla següent. Tots a
-        bord!
+        Lest per abordar aquesta aventura? Sobte a la nau i decideix el destí
+        del nostre heroi cliquejant un futur a la pantalla següent. Tots a bord!
       </p>
-      <StyledButton onClick={props.handleBegining}>Comença</StyledButton>
+      <Button start={props.handleBeggining} name={props.name}>
+        {props.name}
+      </Button>
     </StyledWelcome>
   );
 }

@@ -14,11 +14,16 @@ export const StyledButton = styled.button`
   }
 `;
 
-function Buttons(props) {
+function Button(props) {
   return (
-    <StyledButton onClick={props.handleClick} name={props.name}>
+    <StyledButton
+      onClick={props.name === "Comença" ? props.start : props.handleClick}
+      value={props.value}
+      name={props.name}
+    >
       {props.name}
     </StyledButton>
   );
 }
-export default Buttons;
+
+export default Button;

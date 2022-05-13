@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const StyledEscena = styled.div`
+const StyledH1Container = styled.div`
   width: auto;
   border: 1px solid;
   border-radius: 0.5rem;
@@ -13,29 +12,21 @@ const StyledEscena = styled.div`
   align-items: center;
   opacity: 0.6;
 `;
-
 const StyledH1 = styled.h1`
   font-size: 1rem;
 `;
 
-function Escena(props) {
+function Text(props) {
   const backgroundColor = {
     backgroundColor:
       props.id === props.currentPosition ? "#eca1a1" : "transparent",
   };
+
   return (
-    <StyledEscena style={backgroundColor}>
+    <StyledH1Container style={backgroundColor}>
       <StyledH1>{props.phrase}</StyledH1>
-    </StyledEscena>
+    </StyledH1Container>
   );
 }
 
-export default Escena;
-
-// return (
-//   <div style={{ backgroundImage: `url(${props.img})` }}>
-//     <StyledEscena style={backgroundColor}>
-//       <StyledH1>{props.phrase}</StyledH1>
-//     </StyledEscena>
-//   </div>
-// );
+export default Text;
