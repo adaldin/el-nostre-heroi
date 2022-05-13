@@ -10,7 +10,7 @@ const StyledH1Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0.6;
+  opacity: 0.8;
 `;
 const StyledH1 = styled.h1`
   font-size: 1rem;
