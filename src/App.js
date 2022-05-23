@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+import Welcome from "./pages/Welcome";
+import Escena from "./pages/Escena";
+import "./App.css";
 
 function App() {
+  const [isShown, setIsShown] = useState(true);
+  function handleBeggining() {
+    setIsShown((prevShown) => !prevShown);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      {isShown ? (
+        <Welcome handleBeggining={handleBeggining} name="Comença" />
+      ) : (
+        <Escena />
+      )}
+    </React.Fragment>
   );
 }
 
