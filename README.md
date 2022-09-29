@@ -16,7 +16,6 @@ Navegate through the options to create your story.
 
 
 
-https://user-images.githubusercontent.com/18453013/193060327-5a5b612f-5f63-4802-ab63-184c5f213cee.mov
 
  
 
